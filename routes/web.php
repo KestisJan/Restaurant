@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MeniuItemsController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -23,6 +24,9 @@ Route::get('/', function () {
         'meniu' => $menuItems,
     ]);
 });
+
+// Meniu-Items create form
+Route::get('meniu-items/create', [MeniuItemsController::class, 'create']);
 
 
 

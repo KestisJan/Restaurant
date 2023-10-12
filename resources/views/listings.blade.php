@@ -1,14 +1,20 @@
 @extends('layout')
 
 @section('content')
-
-<h1>{{$heading}}</h1>
-
-    <ul>
-        @foreach ($meniu as $m)
-            <li>{{ $m->name }}</li>
-        @endforeach
-    </ul>
-
-
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3">
+            <h1>{{$heading}}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <p>
+                @foreach ($meniu as $m)
+                    <ul>{{ $m->name }}</ul>
+                @endforeach
+            </p>
+        </div>
+    </div>
+</div>
 @endsection
