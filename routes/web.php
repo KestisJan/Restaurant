@@ -24,10 +24,11 @@ Route::get('/', function () {
         'meniu' => $menuItems,
     ]);
 });
-
-// Meniu-Items create form
+// Meniu-Items Routes
+// Meniu-Items create form route
 Route::get('meniu-items/create', [MeniuItemsController::class, 'create']);
-
+// Meniu-Items store route
+Route::post('meniu-items', [MeniuItemsController::class, 'store']);
 
 
 

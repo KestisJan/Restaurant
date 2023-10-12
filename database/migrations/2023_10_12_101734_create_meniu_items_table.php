@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->text('description')->nullable();
             $table->decimal('price', 8, 2);
-            $table->unsignedBigInteger('meniu_id');
-            $table->foreign('meniu_id')->references('id')->on('meniu');
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('meniu');
             $table->timestamps();
         });
     }
