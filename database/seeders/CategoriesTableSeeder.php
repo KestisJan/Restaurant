@@ -2,21 +2,18 @@
 
 namespace Database\Seeders;
 
-use Database\Factories\MeniuItemsFactory;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-class MeniuCategoriesTableSeeder extends Seeder
+class CategoriesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-
-        DB::table('meniu')->insert([
-            ['name' => 'Brusketa'],
+        DB::table('categories')->insert([
             ['name' => 'Gruzdinti'],
             ['name' => 'Sriuba'],
             ['name' => 'Salotos'],

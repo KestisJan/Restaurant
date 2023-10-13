@@ -5,12 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class MeniuItems extends Model
+class Categories extends Model
 {
     use HasFactory;
 
-    public function category()
-    {
-        return $this->belongsTo('category', 'category_id');
-    }
+    protected $fillable = ['name'];
 }

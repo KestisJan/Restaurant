@@ -9,7 +9,8 @@
 </head>
 <body>
     <nav>
-        <a href="/meniu-items/create">Test</a>
+        <a href="/categories/create">Sukurti kategoriją</a>
+        <a href="/meniu-items/create">Priskirti patiekalą</a>
     </nav>
     <h1>Testing</h1>
     @yield('content')

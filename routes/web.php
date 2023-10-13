@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\MeniuItemsController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -24,11 +25,18 @@ Route::get('/', function () {
         'meniu' => $menuItems,
     ]);
 });
+// Categories Routes
+// Categories create route
+Route::get('/categories/create', [CategoriesController::class, 'create']);
+// Categories store route
+Route::post('/categories', [CategoriesController::class, 'store']);
+
+
 // Meniu-Items Routes
 // Meniu-Items create form route
-Route::get('meniu-items/create', [MeniuItemsController::class, 'create']);
+Route::get('/meniu-items/create', [MeniuItemsController::class, 'create']);
 // Meniu-Items store route
-Route::post('meniu-items', [MeniuItemsController::class, 'store']);
+Route::post('/meniu-items', [MeniuItemsController::class, 'store']);
 
 
 
