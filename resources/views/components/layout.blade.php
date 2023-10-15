@@ -12,7 +12,11 @@
         <a href="/categories/create">Sukurti kategoriją</a>
         <a href="/meniu-items/create">Priskirti patiekalą</a>
     </nav>
-    <h1>Testing</h1>
-    @yield('content')
+    <main>
+        {{$slot}}
+    </main>
+    <footer>
+        <p>Copyright &copy; 2023, All Rights reserved</p>
+    </footer>
 </body>
 </html>

@@ -17,15 +17,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $menuItems = DB::table('meniu')->get();
 
-    return view('listings', [
-        'heading' => 'Menu',
-        'meniu' => $menuItems,
-    ]);
-});
 // Categories Routes
+Route::get('/', [CategoriesController::class, 'index']);
 // Categories create route
 Route::get('/categories/create', [CategoriesController::class, 'create']);
 // Categories store route
