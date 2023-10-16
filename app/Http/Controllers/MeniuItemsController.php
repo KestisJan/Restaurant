@@ -29,5 +29,6 @@ class MeniuItemsController extends Controller
         ]);
 
         MeniuItems::create($data);
+        return redirect('/');
     }
 }
