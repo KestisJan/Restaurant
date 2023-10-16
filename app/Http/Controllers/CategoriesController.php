@@ -31,4 +31,12 @@ class CategoriesController extends Controller
 
         return redirect('/');
     }
+
+    // Delete Category
+
+    public function destroy(Categories $categories) {
+        $categories->delete();
+        
+        return redirect('/');
+    }
 }

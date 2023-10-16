@@ -24,6 +24,8 @@ Route::get('/', [CategoriesController::class, 'index']);
 Route::get('/categories/create', [CategoriesController::class, 'create']);
 // Categories store route
 Route::post('/categories', [CategoriesController::class, 'store']);
+// Categories delete route
+Route::delete('/categories/{categories}', [CategoriesController::class, 'destroy']);
 
 
 // Meniu-Items Routes

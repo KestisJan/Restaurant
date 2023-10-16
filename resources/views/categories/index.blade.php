@@ -8,7 +8,7 @@
                     <td>
                         <h2> {{ $category->name }} </h2>
                     </td>
-                    <td class="px-4 py-8 border-t border-b border-gray-300 text-lg">
+                    <td class="px-4 py-2 border-t border-b border-gray-300 text-lg">
                        <form method="POST" action="/categories/{{$category->id}}">
                         @csrf
                         @method('DELETE')
