@@ -4,29 +4,35 @@
         <div class="text-center my-4">
             <h1 class="text-2x1 font-semibold">Kategorijų sąrašas</h1>
         </div>
-        <table class="w-full table-auto rounded-sm">
-            <tbody>
-                @foreach($categories as $category)
-                <tr class="border-gray-300">
-                    <td>
-                        <h2>{{ $category->name }}</h2>
+        <table class="table table-hover table-default">
+            @foreach($categories as $category)
+                <form method="POST" action="/categories/{{$category->id}}">
+                    @csrf
+                    @method('DELETE')
+                    <thead>
+                        <tr>
+                            <th scope="col" colspan="2">{{ $category->name }}</th>
+                            <th scope="col" colspan="1">Kaina</th>
+                            <th scope="col" colspan="3">Aprasymas</th>
+                            <th scope="col" colspan="3" class="bg-">
+                                <button><i class="fas fa-trash"></i> Ištrinti kategoriją</button>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
                         @foreach($menuItems as $menuItem)
                         @if($category->id === $menuItem->category_id)
-                        <span>{{$menuItem->name}} ({{$menuItem->price}} eu)</span>
+                        <tr>
+                            <th scope="row">-</th>
+                            <td>{{$menuItem->name}}</td>
+                            <td>{{$menuItem->price}} eu</td>
+                            <td>{{$menuItem->description}}</td>
+                        </tr>
                         @endif
                         @endforeach
-                    </td>
-                    <td class="px-4 py-2 border-t border-b border-gray-300 text-lg">
-                        <form method="POST" action="/categories/{{$category->id}}">
-                            @csrf
-                            @method('DELETE')
-                            <button><i class="fas fa-trash"></i> Ištrinti kategoriją</button>
-                        </form>
-                    </td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
+                    </tbody>
+            @endforeach
+          </table>
     </div>
 </div>
 </x-layout>
