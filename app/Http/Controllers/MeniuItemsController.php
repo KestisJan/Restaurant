@@ -24,8 +24,7 @@ class MeniuItemsController extends Controller
             'name' => 'required',
             'price' => 'required|numeric',
             'description' => 'nullable',
-            'category_id' => 'required|exists:categories,id',
-            // Add other validation rules for your fields
+            'category_id' => 'required',
         ]);
 
         MeniuItems::create($data);

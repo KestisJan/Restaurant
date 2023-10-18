@@ -36,8 +36,10 @@ class CategoriesController extends Controller
 
     // Delete Category
 
-    public function destroy(Categories $categories) {
-        $categories->delete();
+    public function destroy($categoryId) {
+
+        $category = Categories::find($categoryId);
+        $category->delete();
         
         return redirect('/');
     }

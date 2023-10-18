@@ -10,4 +10,9 @@ class Categories extends Model
     use HasFactory;
 
     protected $fillable = ['name'];
+
+    public function menuItems()
+    {
+        return $this->hasMany(MeniuItems::class);
+    }
 }
