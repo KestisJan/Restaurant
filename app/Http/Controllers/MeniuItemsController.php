@@ -19,13 +19,16 @@ class MeniuItemsController extends Controller
     // Store Meniu-Items
 
     public function store(Request $request) {
-
         $data = $request->validate([
             'name' => 'required',
             'price' => 'required|numeric',
             'description' => 'nullable',
             'category_id' => 'required',
         ]);
+
+        if($request->hasFile('image')) {
+            $data['image'] = $request->file('image')->store('images', 'public');
+        }
 
         MeniuItems::create($data);
         return redirect('/');

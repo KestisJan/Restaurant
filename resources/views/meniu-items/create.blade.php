@@ -1,3 +1,4 @@
+<x-layout>
 <div class="row justify-content-center">
     <div class="col-auto">
         <form method="POST" action="/meniu-items" enctype="multipart/form-data">
@@ -23,11 +24,13 @@
                 <label for="description" class="form-label">Aprašymas</label>
                 <textarea rows="4" class="form-control" name="description" placeholder="Patiekalo aprašymas"></textarea>
             </div>
-            {{-- <div class="mb-3">
-                <label for="image" class="form-label">Patiekalo nuotraukos</label>
+            <div class="mb-3">
+                <label for="image" class="form-label">Patiekalo nuotrauka</label>
                 <input type="file" class="form-control" name="image">
-            </div> --}}
+            </div>
             <button type="submit" class="btn btn-primary">Sukurti patiekalą</button>
+            <a href="/" class="btn btn-danger">Grįžti atgal</a>
         </form>
     </div>
 </div>
+</x-layout>

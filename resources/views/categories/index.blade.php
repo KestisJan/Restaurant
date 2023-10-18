@@ -22,12 +22,7 @@
                     <tbody>
                         @foreach($menuItems as $menuItem)
                         @if($category->id === $menuItem->category_id)
-                        <tr>
-                            <th scope="row">-</th>
-                            <td>{{$menuItem->name}}</td>
-                            <td>{{$menuItem->price}} eu</td>
-                            <td>{{$menuItem->description}}</td>
-                        </tr>
+                        <x-meniu-items-card :menuItem="$menuItem"/>
                         @endif
                         @endforeach
                     </tbody>
