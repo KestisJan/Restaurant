@@ -11,7 +11,7 @@
                     @method('DELETE')
                     <thead>
                         <tr>
-                            <th scope="col" colspan="2">{{ $category->name }}</th>
+                            <th scope="col" colspan="1">{{ $category->name }}</th>
                             <th scope="col" colspan="1">Kaina</th>
                             <th scope="col" colspan="3">Aprasymas</th>
                             <th scope="col" colspan="3" class="bg-">

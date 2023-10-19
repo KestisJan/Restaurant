@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categories;
 use App\Models\MeniuItems;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -32,5 +33,14 @@ class MeniuItemsController extends Controller
 
         MeniuItems::create($data);
         return redirect('/');
+    }
+
+    // Edit Meniu-Items
+
+    public function edit(MeniuItems $meniuItem) {
+        return view('meniu-items.edit', [
+            'categories' => Categories::all(),
+            'meniuItem' => $meniuItem,
+        ]);
     }
 }

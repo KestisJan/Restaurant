@@ -1,8 +1,13 @@
 @props(['menuItem'])
 
 <tr>
-    <td>{{$menuItem->name}}</td>
-    <td>{{$menuItem->price}} eu</td>
-    <td>{{$menuItem->description}}</td>
-    <img src="{{asset ('storage/' . $menuItem->image)}}"/>
+    <td>
+        {{$meniuItem->name}}
+        <img style="width: 200px" src="{{asset ('storage/' . $meniuItem->image)}}"/>
+    </td>
+    <td>{{$meniuItem->price}} eu</td>
+    <td style="width: 300px">{{$meniuItem->description}}</td>
+    <td>
+    <a href="/meniu-items/{{$meniuItem->id}}/edit">Redaguoti patiekalą</a>
+    </td>
 </tr>

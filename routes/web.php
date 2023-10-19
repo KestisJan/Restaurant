@@ -33,6 +33,8 @@ Route::delete('/categories/{categories}', [CategoriesController::class, 'destroy
 Route::get('/meniu-items/create', [MeniuItemsController::class, 'create']);
 // Meniu-Items store route
 Route::post('/meniu-items', [MeniuItemsController::class, 'store']);
+// Meniu-Items edit route
+Route::get('/meniu-items/{meniuItem}/edit', [MeniuItemsController::class, 'edit']);
 
 
 
