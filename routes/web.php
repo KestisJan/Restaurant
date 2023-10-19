@@ -49,3 +49,6 @@ Route::delete('meniu-items/{meniuItem}', [MeniuItemsController::class, 'destroy'
 
 // Career create route
 Route::get('career/apply', [CareerController::class, 'create']);
+// Career store route
+Route::post('/career', [CareerController::class, 'store']);
+

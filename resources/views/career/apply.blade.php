@@ -26,8 +26,8 @@
             </div>
 
             <div class="form-check mb-8">
-                <input type="checkbox" name="privacy_policy" class="form-check-input" required>
-                <label class="form-check-label" for="privacy_policy">Aš sutinktu su Italy Restaurant privatumo politika</label>
+                <input type="checkbox" name="privacy_policy" class="form-check-input" value="1" required>
+                <label class="form-check-label" for="privacy_policy" >Aš sutinktu su Italy Restaurant privatumo politika</label>
             </div>
 
             <div class="mb-7">

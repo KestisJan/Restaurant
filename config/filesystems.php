@@ -29,6 +29,11 @@ return [
     */
 
     'disks' => [
+        'cv' => [
+            'driver' => 'local',
+            'root' => storage_path('app/cv'),
+            'throw' => false,
+        ],
 
         'local' => [
             'driver' => 'local',
