@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CareerController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\MeniuItemsController;
 use Illuminate\Support\Facades\DB;
@@ -19,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 
 
 // Categories Routes
+
+// Categories index route
 Route::get('/', [CategoriesController::class, 'index']);
 // Categories create route
 Route::get('/categories/create', [CategoriesController::class, 'create']);
@@ -29,6 +32,7 @@ Route::delete('/categories/{categories}', [CategoriesController::class, 'destroy
 
 
 // Meniu-Items Routes
+
 // Meniu-Items create form route
 Route::get('/meniu-items/create', [MeniuItemsController::class, 'create']);
 // Meniu-Items store route
@@ -41,4 +45,7 @@ Route::put('/meniu-items/{meniuItem}', [MeniuItemsController::class, 'update']);
 Route::delete('meniu-items/{meniuItem}', [MeniuItemsController::class, 'destroy']);
 
 
+// Career Routes
 
+// Career create route
+Route::get('career/apply', [CareerController::class, 'create']);

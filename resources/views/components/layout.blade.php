@@ -15,6 +15,7 @@
     <nav>
         <a href="/categories/create">Sukurti kategoriją</a>
         <a href="/meniu-items/create">Priskirti patiekalą</a>
+        <a href="/career/apply">Karjera</a>
     </nav>
     <main>
         {{$slot}}
