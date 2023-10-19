@@ -43,7 +43,7 @@ class MeniuItemsController extends Controller
             'meniuItem' => $meniuItem,
         ]);
     }
-
+    // Update Meniu-Items
     public function update(Request $request, MeniuItems $meniuItem) {
         $data = $request->validate([
             'name' => 'required',
@@ -57,6 +57,14 @@ class MeniuItemsController extends Controller
         }
 
         $meniuItem->update($data);
-        return back();
+        return redirect('/');
     }
+
+    // Delete Meniu-Items
+    public function destroy(MeniuItems $meniuItem) {
+        $meniuItem->delete();
+        
+        return redirect('/');
+    }
+
 }

@@ -37,6 +37,8 @@ Route::post('/meniu-items', [MeniuItemsController::class, 'store']);
 Route::get('/meniu-items/{meniuItem}/edit', [MeniuItemsController::class, 'edit']);
 // Meniu-Items update route
 Route::put('/meniu-items/{meniuItem}', [MeniuItemsController::class, 'update']);
+// Meniu-Items delete route
+Route::delete('meniu-items/{meniuItem}', [MeniuItemsController::class, 'destroy']);
 
 
 

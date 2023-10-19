@@ -8,6 +8,12 @@
     <td>{{$meniuItem->price}} eu</td>
     <td style="width: 300px">{{$meniuItem->description}}</td>
     <td>
-    <a href="/meniu-items/{{$meniuItem->id}}/edit">Redaguoti patiekalą</a>
+        <a href="/meniu-items/{{$meniuItem->id}}/edit" class="btn btn-primary">Redaguoti patiekalą</a>
+
+        <form method="POST" action="/meniu-items/{{$meniuItem->id}}">
+            @csrf
+            @method('DELETE')
+            <button class="btn btn-danger">Ištrinti patiekalą</button>
+        </form>
     </td>
 </tr>
