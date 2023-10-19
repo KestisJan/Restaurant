@@ -20,9 +20,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($menuItems as $menuItem)
-                        @if($category->id === $menuItem->category_id)
-                        <x-meniu-items-card :menuItem="$menuItem"/>
+                        @foreach($meniuItems as $meniuItem)
+                        @if($category->id === $meniuItem->category_id)
+                        <x-meniu-items-card :meniuItem="$meniuItem"/>
                         @endif
                         @endforeach
                     </tbody>

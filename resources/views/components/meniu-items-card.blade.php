@@ -1,4 +1,4 @@
-@props(['menuItem'])
+@props(['meniuItem'])
 
 <tr>
     <td>

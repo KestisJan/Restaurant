@@ -11,9 +11,9 @@ class MeniuItemsController extends Controller
 {
     // Create form
     public function create() {
-        $menuItems = DB::table('categories')->get();
+        $meniuItems = DB::table('categories')->get();
         return view('meniu-items.create', [
-            'categories' => $menuItems,
+            'categories' => $meniuItems,
         ]);
     }
 
