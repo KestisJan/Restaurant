@@ -43,4 +43,20 @@ class MeniuItemsController extends Controller
             'meniuItem' => $meniuItem,
         ]);
     }
+
+    public function update(Request $request, MeniuItems $meniuItem) {
+        $data = $request->validate([
+            'name' => 'required',
+            'price' => 'required|numeric',
+            'description' => 'nullable',
+            'category_id' => 'required',
+        ]);
+
+        if($request->hasFile('image')) {
+            $data['image'] = $request->file('image')->store('images', 'public');
+        }
+
+        $meniuItem->update($data);
+        return back();
+    }
 }

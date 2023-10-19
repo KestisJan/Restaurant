@@ -35,6 +35,8 @@ Route::get('/meniu-items/create', [MeniuItemsController::class, 'create']);
 Route::post('/meniu-items', [MeniuItemsController::class, 'store']);
 // Meniu-Items edit route
 Route::get('/meniu-items/{meniuItem}/edit', [MeniuItemsController::class, 'edit']);
+// Meniu-Items update route
+Route::put('/meniu-items/{meniuItem}', [MeniuItemsController::class, 'update']);
 
 
 
