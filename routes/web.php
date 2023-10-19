@@ -46,9 +46,12 @@ Route::delete('meniu-items/{meniuItem}', [MeniuItemsController::class, 'destroy'
 
 
 // Career Routes
-
+// Career index route
+Route::get('/career/index', [CareerController::class, 'index'])->name('applicants.index');
 // Career create route
 Route::get('career/apply', [CareerController::class, 'create']);
 // Career store route
 Route::post('/career', [CareerController::class, 'store']);
+// Career download route
+Route::get('/career/download/{id}', [CareerController::class, 'downloadCV']);
 

@@ -16,6 +16,7 @@
         <a href="/categories/create">Sukurti kategoriją</a>
         <a href="/meniu-items/create">Priskirti patiekalą</a>
         <a href="/career/apply">Karjera</a>
+        <a href="{{ route('applicants.index') }}">Pretendentų sąrašas</a>
     </nav>
     <main>
         {{$slot}}

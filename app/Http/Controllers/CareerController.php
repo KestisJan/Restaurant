@@ -6,7 +6,13 @@ use App\Models\Career;
 use Illuminate\Http\Request;
 
 class CareerController extends Controller
-{
+{   
+    public function index() {
+        return view('career.index',[
+            'careers' => Career::all(),
+        ]);
+    }
+
     public function create() {
         return view('career.apply');
     }
@@ -22,11 +28,15 @@ class CareerController extends Controller
         ]);
 
         if ($request->hasFile('cv')) {
-            $data['cv'] = $request->file('cv')->store('cv', 'cv');
+            $data['cv'] = $request->file('cv')->store('cv');
         }
 
         Career::create($data);
         
         return redirect('/');
+    }
+     // Download function
+    public function downloadCV($id) {
+        return dd('ok');
     }
 }
