@@ -9,6 +9,6 @@ class Career extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'email', 'position', 'text', 'cv', 'privacy_policy'];
+    protected $fillable = ['name', 'email', 'position', 'cover_letter', 'cv', 'privacy_policy'];
             
 }

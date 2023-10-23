@@ -20,7 +20,7 @@
                         <td>{{ $career->cover_letter }}</td>
                         <td>
                             @if ($career->cv)
-                            <a href="{{ url('career/download/' . $career->id) }}" class="btn btn-primary" download>Parsisiųsti CV</a>
+                            <a class="btn btn-success" href="{{ route('file.download', [ 'filename' => $career->cv ]) }}">Parsisiųsti</a>
                             @endif
                         </td>
                     </tr>

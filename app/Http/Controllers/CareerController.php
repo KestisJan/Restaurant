@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Career;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class CareerController extends Controller
 {   
@@ -28,7 +29,7 @@ class CareerController extends Controller
         ]);
 
         if ($request->hasFile('cv')) {
-            $data['cv'] = $request->file('cv')->store('cv');
+            $data['cv'] = $request->file('cv')->store('cv', 'local');
         }
 
         Career::create($data);
@@ -36,7 +37,12 @@ class CareerController extends Controller
         return redirect('/');
     }
      // Download function
-    public function downloadCV($id) {
-        return dd('ok');
+     public function download($filename) {
+        $file = storage_path('app/' . $filename);
+        if (file_exists($file)) {
+            return response()->file($file);
+        } else {
+            abort(404);
+        }
     }
 }
