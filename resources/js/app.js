@@ -37,3 +37,5 @@ app.component('example-component', ExampleComponent);
  */
 
 app.mount('#app');
+// Font-Awesome
+require('font-awesome/css/font-awesome.css');

@@ -17,7 +17,7 @@
                             <th scope="col" colspan="1">Kaina</th>
                             <th scope="col" colspan="3">Aprasymas</th>
                             <th scope="col" colspan="3" class="bg-">
-                                <button><i class="fas fa-trash"></i> Ištrinti kategoriją</button>
+                               <button><i class="fa-solid fa-pencil"></i>Ištrinti kategoriją</button>
                             </th>
                         </tr>
                     </thead>
