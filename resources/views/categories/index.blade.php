@@ -17,7 +17,9 @@
                             <th scope="col" colspan="1">Kaina</th>
                             <th scope="col" colspan="3">Aprasymas</th>
                             <th scope="col" colspan="3" class="bg-">
-                               <button><i class="fa-solid fa-pencil"></i>Ištrinti kategoriją</button>
+                                <div class="button-container">
+                                    <button data-toggle="tooltip" data-placement="top" title="Ištrinti kategoriją {{ $category->name }} ir visus patiekalus"><i class="fa-solid fa-trash"></i></button>
+                                </div>
                             </th>
                         </tr>
                     </thead>

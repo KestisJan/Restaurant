@@ -10,12 +10,12 @@
     <td>{{$meniuItem->price}} €</td>
     <td style="width: 15em">{{$meniuItem->description}}</td>
     <td>
-        <a href="/meniu-items/{{$meniuItem->id}}/edit" class="btn btn-primary">Redaguoti patiekalą</a>
+        <a href="/meniu-items/{{$meniuItem->id}}/edit" style="color: black"><i class="fa-solid fa-pencil"></i></a>
 
         <form method="POST" action="/meniu-items/{{$meniuItem->id}}">
             @csrf
             @method('DELETE')
-            <button class="btn btn-danger">Ištrinti patiekalą</button>
+            <a href="#" class="delete-link" style="color: black"><i class="fa-sharp fa-solid fa-trash"></i></a>
         </form>
     </td>
 </tr>
