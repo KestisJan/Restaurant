@@ -1,6 +1,6 @@
 <x-layout>
 <div class="container">
-    <div class="row justify-content-center align-items-center">
+    <div class="row justify-content-center align-items-center p-5">
         <div class="col-auto">
             <form method="POST" action="/categories">
                 @csrf

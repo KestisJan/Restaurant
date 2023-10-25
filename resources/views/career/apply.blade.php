@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container">
+    <div class="container p-5">
         <h3>Karjera</h3>
 
         <form method="POST" action="/career" enctype="multipart/form-data">

@@ -2,7 +2,7 @@
 <div class="row justify-content-center">
     <div class="col-auto">
         <div class="text-center my-4">
-            <h1 class="text-2x1 font-semibold">Kategorijų sąrašas</h1>
+            <h1 class="text-2x1 font-semibold">Menių</h1>
         </div>
         <table class="table table-hover table-default">
             @foreach($categories as $category)
@@ -11,7 +11,9 @@
                     @method('DELETE')
                     <thead>
                         <tr>
-                            <th scope="col" colspan="1">{{ $category->name }}</th>
+                            <div>
+                            </div>
+                            <th><h3>{{ $category->name}}</h3></th>
                             <th scope="col" colspan="1">Kaina</th>
                             <th scope="col" colspan="3">Aprasymas</th>
                             <th scope="col" colspan="3" class="bg-">

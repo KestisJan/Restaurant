@@ -22,7 +22,7 @@
             </div>
             <div class="mb-3">
                 <label for="description" class="form-label">Aprašymas</label>
-                <textarea rows="4" class="form-control" name="description" placeholder="Patiekalo aprašymas"></textarea>
+                <textarea style="width: 100%;" rows="5" class="form-control" name="description" placeholder="Patiekalo aprašymas"></textarea>
             </div>
             <div class="mb-3">
                 <label for="image" class="form-label">Patiekalo nuotrauka</label>

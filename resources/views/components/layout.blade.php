@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Itališkas Restoranas</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0-beta2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-MCw98/SFnGErJKt2uJ3w9C02t5CO0tCacu8T3ArWfKI5FDxj5N7E1ehU7HPjDY5G0" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -28,7 +28,7 @@
     <main style="background-color: #F4F3EA;">
         {{$slot}}
     </main>
-    <footer style="background-color: #333D51   ; color: #fff; text-align: center; padding: 10px">
+    <footer style="background-color: #333D51; color: #fff; text-align: center; padding: 25px">
         <p>Copyright &copy; 2023, All Rights reserved</p>
     </footer>
 </body>
