@@ -10,18 +10,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-    <nav>
+    <nav style="background-color: #333D51; display: flex; justify-content: space-evenly; padding: 10px;">
+        <a href="/">Pagrindinis puslapis</a>
         <a href="/categories/create">Sukurti kategoriją</a>
         <a href="/meniu-items/create">Priskirti patiekalą</a>
         <a href="/career/apply">Karjera</a>
         <a href="{{ route('applicants.index') }}">Pretendentų sąrašas</a>
     </nav>
-    <main>
+    <main style="background-color: #F4F3EA;">
         {{$slot}}
     </main>
-    <footer>
+    <footer style="background-color: #333D51   ; color: #fff; text-align: center; padding: 10px">
         <p>Copyright &copy; 2023, All Rights reserved</p>
     </footer>
 </body>

@@ -1,3 +1,4 @@
+<x-layout>
 <div class="container">
     <div class="row justify-content-center align-items-center">
         <div class="col-auto">
@@ -12,3 +13,4 @@
         </div>
     </div>
 </div>
+</x-layout>
