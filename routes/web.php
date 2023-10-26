@@ -54,3 +54,5 @@ Route::get('/career/apply', [CareerController::class, 'create']);
 Route::post('/career', [CareerController::class, 'store']);
 // Career download route
 Route::get('/download-file/{filename}', [CareerController::class, 'download'])->name('file.download')->where('filename', '(.*)');
+// Career delete route
+Route::delete('career/{career}', [CareerController::class, 'destroy']);

@@ -46,7 +46,8 @@ class CareerController extends Controller
         }
     }
 
-    public function destroy(Career $cv) {
+    public function destroy($careerId) {
+        $cv = Career::find($careerId);
         $cv->delete();
         
         return redirect('/');
