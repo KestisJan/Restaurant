@@ -45,4 +45,10 @@ class CareerController extends Controller
             abort(404);
         }
     }
+
+    public function destroy(Career $cv) {
+        $cv->delete();
+        
+        return redirect('/');
+    }
 }
