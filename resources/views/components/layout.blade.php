@@ -19,15 +19,15 @@
         }
     </style>
 </head>
-<body>
-    <nav style="background-color: #333D51; display: flex; justify-content: space-evenly; padding: 10px;">
+<body style="display: flex; flex-direction: column; min-height: 100vh; margin: 0;">
+    <nav style="background-color: #333D51;" class="d-flex justify-content-evenly align-items-center p-2">
         <a href="/">Pagrindinis puslapis</a>
         <a href="/categories/create">Sukurti kategoriją</a>
         <a href="/meniu-items/create">Priskirti patiekalą</a>
         <a href="/career/apply">Karjera</a>
         <a href="{{ route('applicants.index') }}">Pretendentų sąrašas</a>
     </nav>
-    <main style="background-color: #F4F3EA;">
+    <main style="background-color: #F4F3EA; flex-grow: 1; padding: 3em">
         {{$slot}}
     </main>
     <footer style="background-color: #333D51; color: #fff; text-align: center; padding: 25px">
