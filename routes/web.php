@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\MeniuItemsController;
@@ -56,3 +57,8 @@ Route::post('/career', [CareerController::class, 'store']);
 Route::get('/download-file/{filename}', [CareerController::class, 'download'])->name('file.download')->where('filename', '(.*)');
 // Career delete route
 Route::delete('career/{career}', [CareerController::class, 'destroy']);
+
+
+// Admin Routes
+// Admin Login Route
+Route::get('/admin/login', [AdminController::class, 'login'])->name('login');
