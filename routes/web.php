@@ -60,5 +60,13 @@ Route::delete('career/{career}', [CareerController::class, 'destroy']);
 
 
 // Admin Routes
+// Admin register
+Route::get('/admin/register', [AdminController::class, 'register']);
 // Admin Login Route
 Route::get('/admin/login', [AdminController::class, 'login'])->name('login');
+// Admin Log IN
+Route::post('/admin/authenticate', [AdminController::class, 'authenticate']);
+// Admin Log OUT
+Route::post('/logout', [AdminController::class, 'logout']);
+
+

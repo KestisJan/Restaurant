@@ -64,6 +64,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Admin::class,
+        ]
 
         // 'users' => [
         //     'driver' => 'database',
@@ -111,5 +115,11 @@ return [
     */
 
     'password_timeout' => 10800,
+
+    // Custom guard for 'admins'
+    'admins' => [
+        'driver' => 'session',
+        'provider' => 'admins',
+    ]
 
 ];

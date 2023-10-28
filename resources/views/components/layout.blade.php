@@ -20,12 +20,27 @@
     </style>
 </head>
 <body style="display: flex; flex-direction: column; min-height: 100vh; margin: 0;">
-    <nav style="background-color: #333D51;" class="d-flex justify-content-evenly align-items-center p-2">
-        <a href="/">Pagrindinis puslapis</a>
-        <a href="/categories/create">Sukurti kategoriją</a>
-        <a href="/meniu-items/create">Priskirti patiekalą</a>
-        <a href="/career/apply">Karjera</a>
-        <a href="{{ route('applicants.index') }}">Pretendentų sąrašas</a>
+    <nav style="background-color: #333D51;" class="d-flex flex-row-reverse">
+        <div class="p-3 ">
+            @auth
+            <a href="/categories/create" class="p-3">Sukurti kategoriją</a>
+            <a href="/meniu-items/create" class="p-3">Priskirti patiekalą</a>
+            <a href="{{ route('applicants.index') }}" class="p-3">Pretendentų sąrašas</a>
+            <a href="/" class="p-2">Menių</a>
+            <a href="/career/apply" class="p-3">Karjera</a>
+            <li>
+                <form class="inline" method="POST" action="/logout">
+                    @csrf
+                    <button type="submit">
+                        <i class="fa-solid fa-door-closed"></i> logout
+                    </button>
+                </form>
+            </li>
+            @else
+            <a href="/" class="p-2">Menių</a>
+            <a href="/career/apply" class="p-3">Karjera</a>
+            @endauth
+        </div>
     </nav>
     <main style="background-color: #F4F3EA; flex-grow: 1; padding: 3em">
         {{$slot}}

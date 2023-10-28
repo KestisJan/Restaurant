@@ -1,9 +1,8 @@
 <x-layout>
     <div class="container">
         <div class="row justify-content-center py-5">
-            <form method="POST" action="/users/authenticate" class="col-12 col-md-6">
+            <form method="POST" action="/admin/authenticate" class="col-12 col-md-6">
                 @csrf
-                
                 
                 <div class="form-group">
                     <label for="email">Email</label>
@@ -11,13 +10,13 @@
                 </div>
     
                 <div class="form-group">
-                    <label for="password">Password</label>
+                    <label for="password">Slaptažodis</label>
                     <input type="password" class="form-control" name="password"/>
                 </div>
     
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">
-                        Sign In 
+                        Prisijungti
                     </button>
                 </div>
             </form>
